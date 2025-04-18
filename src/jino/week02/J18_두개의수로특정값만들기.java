@@ -4,9 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class J18_두개의수로특정값만들기 {
-   import java.util.*;
-import java.lang.*;
-import java.io.*;
+
 
     // The main method must be in a class named "Main".
     class Main {

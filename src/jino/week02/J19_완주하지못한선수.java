@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class J19_완주하지못한선수 {
- import java.util.*;
+
     class Solution {
         public String solution(String[] participant, String[] completion) {
             String answer = "";
