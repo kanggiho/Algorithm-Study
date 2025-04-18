@@ -49,4 +49,5 @@
 - 입출력 템플릿은 각자 자유롭게 사용
 
 ## 📖 교재
-![image](https://github.com/user-attachments/assets/11b5641a-4abf-4c5f-a298-fe456d35d4a8)
+![image](https://github.com/user-attachments/assets/221b9d26-53ad-47f4-96e0-55457eb1ab9b)
+
