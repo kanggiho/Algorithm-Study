@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class G04_모의고사 {
 
     public int[] solution(int[] answers) {
+
         int[] a = {1,2,3,4,5};
         int[] b = {2,1,2,3,2,4,2,5};
         int[] c = {3,3,1,1,2,2,4,4,5,5};
