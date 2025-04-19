@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class J21_오픈채팅방 {
-    
+
     class Solution {
         static Map<String, String> hash;
         static List<String> IdList;//uid1234
