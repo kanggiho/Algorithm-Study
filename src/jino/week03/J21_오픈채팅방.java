@@ -18,6 +18,7 @@ public class J21_오픈채팅방 {
             visitList = new ArrayList<>();
             List<String> nameList = new ArrayList<>();
 
+            
             for (String str : record) {
                 check(str);
             }
