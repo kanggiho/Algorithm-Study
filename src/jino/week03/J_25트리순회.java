@@ -37,5 +37,5 @@ public class J_25트리순회 {
                     postOrder(nodes, (2 * index) +1) +
                     nodes[index]+" ";
         }
-    
+
 }
