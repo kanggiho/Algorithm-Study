@@ -4,35 +4,30 @@ import java.util.*;
 
 public class G24_메뉴리뉴얼 {
 
-
-
-
     public String[] solution(String[] orders, int[] course) {
-
 
         ArrayList<String> answerList = new ArrayList<>();
         ArrayList<String> combinations = new ArrayList<>();
         Map<String, Integer> comboCount = new HashMap<>();
 
+        // 부분 조합 만들기
         for (int i = 0; i < course.length; i++) {
             for (int j = 0; j < orders.length; j++) {
+                // 사전 순서대로 정렬
                 char[] chars = orders[j].toCharArray();
                 Arrays.sort(chars);
                 generateCombinations("",new String(chars) ,course[i],0,combinations);
             }
         }
-        for(int i = 0 ; i<course.length;i++){
 
-
-        }
-
-
+        // 부분 조합이 같은 경우 맵에 저장 , ex)["AC",3]
         for (String combo : combinations) {
             comboCount.put(combo, comboCount.getOrDefault(combo, 0) + 1);
         }
 
-
+        // 코스별로 가장 많은 것 찾기
         for (int cour : course) {
+            //가장 많은 것을
             int max = 0;
             List<String> temp = new ArrayList<>();
 
@@ -54,12 +49,13 @@ public class G24_메뉴리뉴얼 {
             answerList.addAll(temp);
         }
 
-        // 4. 정렬 후 배열로 변환
+        // 정렬 후 배열로 변환
         Collections.sort(answerList);
         return answerList.toArray(new String[0]);
 
     }
 
+    // 부분조합 만드는 함수
     void generateCombinations(String path, String input, int r, int index, List<String> result) {
         if (path.length() == r) {
             result.add(path);
