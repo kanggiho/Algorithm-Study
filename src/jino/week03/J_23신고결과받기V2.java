@@ -3,7 +3,7 @@ package jino.week03;
 import java.util.*;
 
 public class J_23신고결과받기V2 {
-    
+
     class Solution {
         private static Map<String ,Integer> reportCount; // k번 이상신고당한 횟수 저장
         private static Map<String ,ArrayList<String>>reportPepole; // 내가 누굴 신고했는지 저장
