@@ -3,7 +3,7 @@ package jino.week03;
 import java.util.ArrayList;
 
 public class J_28양늑대 {
-    
+
 
     class Solution {
         private static ArrayList<Integer>[] Graph = new ArrayList[17];//인접리스트 문제
