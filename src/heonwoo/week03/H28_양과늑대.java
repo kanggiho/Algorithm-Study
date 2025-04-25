@@ -2,7 +2,7 @@ package heonwoo.week03;
 
 import java.util.*;
 
-public class H24_메뉴리뉴얼 {
+public class H28_양과늑대 {
     public static void main(String[] args) {
         String[] orders = {"ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"};
         int[] course = {2, 3, 4};
