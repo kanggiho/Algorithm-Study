@@ -9,6 +9,7 @@ public class H23_신고결과받기 {
         int[] answer = new int[id_list.length]; // 메일을 받은 횟수
         HashMap<String, Integer> idMap = new HashMap<>(); // 유저 순서저장
         HashMap<String, HashSet<String>> map = new HashMap<>(); // 각 유저별 자신을 신고한 유저 set
+        // ket값이 신고받은 사람, value값이 신고한 사람
 
         // init
         for(int i=0; i<id_list.length;i++){
