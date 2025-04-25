@@ -20,21 +20,23 @@ public class G24_메뉴리뉴얼 {
             }
         }
 
-        // 부분 조합이 같은 경우 맵에 저장 , ex)["AC",3]
+        // 부분 조합이 같은 경우 맵에 저장 , ex)["AC",3] ,["BC",5]
         for (String combo : combinations) {
             comboCount.put(combo, comboCount.getOrDefault(combo, 0) + 1);
         }
 
         // 코스별로 가장 많은 것 찾기
         for (int cour : course) {
-            //가장 많은 것을
+            // 가장 많은 것을 넣을 변수
             int max = 0;
+
             List<String> temp = new ArrayList<>();
 
             for (Map.Entry<String, Integer> entry : comboCount.entrySet()) {
                 String combo = entry.getKey();
                 int count = entry.getValue();
 
+                // 최대인것 임시 리스트에 넣기
                 if (combo.length() == cour && count >= 2) {
                     if (count > max) {
                         max = count;
