@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class J38_네트워크 {
-    
+
     class Solution {
         private static List<Integer>[] A ;
         private static boolean[] visited;
