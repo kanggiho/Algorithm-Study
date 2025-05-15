@@ -30,11 +30,14 @@ public class U01_String {
         // 문자열 비교
         /**
          * str과 "apple"이 같으면 0
-         * str이 사전순으로 앞서면 -1
-         * str이 사전순으로 뒤면 1
+         * str이 사전순으로 앞서면 -1(음수)
+         * str이 사전순으로 뒤면 1(양수)
          * 마지막 문자가 다르면, 마지막 문자의 사전순 차이 반환
          */
         str.compareTo("applf");  // 예: -1
+
+        // 문자열 비교 (대소문자 무시)
+        str.compareToIgnoreCase("APPLE");
 
         // 문자열 포함 여부 판단
         str.contains("app"); // true
