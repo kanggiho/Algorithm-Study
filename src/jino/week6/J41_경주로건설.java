@@ -2,7 +2,7 @@ package jino.week6;
 
 import java.util.ArrayDeque;
 
-public class J_경주로건설 {
+public class J41_경주로건설 {
 
 
     class Solution {
