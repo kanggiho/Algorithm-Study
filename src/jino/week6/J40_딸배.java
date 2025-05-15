@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 public class J40_딸배 {
-    
+
     class Solution {
         private static int[] distance;
         private static int answer;
