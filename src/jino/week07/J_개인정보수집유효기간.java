@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class J_개인정보수집유효기간 {
-    
+
     class Solution {
         private Map<String , Integer> myHash;
         private int[] answer;
