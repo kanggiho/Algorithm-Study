@@ -55,6 +55,8 @@ public class G36_다익스트라알고리즘 {
         graph[4].add(new Edge(5, 1));
 
         dijkstra(1, n);
+
+        Arrays.stream(dist).forEach(System.out::println);
     }
 
 
