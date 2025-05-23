@@ -27,7 +27,7 @@ public class K21_오픈채팅방 {
 
         // 출력 메시지 만들기
         String[] result = new String[logs.size()];
-        for (int i = 0; i < logs.size(); i++) {
+        for (int i = 0; i < logs.size(); i++) {  // + 여기서 action을 정리하는 것도 좋을 것 같음
             String uid = logs.get(i)[0];
             String action = logs.get(i)[1];
             String nickname = userMap.get(uid);

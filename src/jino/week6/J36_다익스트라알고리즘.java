@@ -10,8 +10,8 @@ public class J36_다익스트라알고리즘 {
 
     // The main method must be in a class named "Main".
     class Main {
-        private static List<Node>[] A;
-        private static int[] distance;
+        private static List<Node>[] A;//인접리스트
+        private static int[] distance;//다익스트라
         private static int[] answer;
         private static PriorityQueue<Node> pq;
 
@@ -33,7 +33,7 @@ public class J36_다익스트라알고리즘 {
             }
 
             distance = new int[n];
-            Arrays.fill(distance, Integer.MAX_VALUE);
+            Arrays.fill(distance, Integer.MAX_VALUE);//다익스트라
             distance[start] = 0;
 
             pq = new PriorityQueue<>((o1, o2) ->{

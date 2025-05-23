@@ -12,18 +12,19 @@ public class K27_다단계칫솔판매 {
             String[] seller,
             int[] amount
     ) {
-        int n = enroll.length;
-        int[] finalProfit = new int[n];
-        int[] parent = new int[n];
+        // int n = enroll.length;
+        final int ENROLL_PERSON = enroll.length;
+        int[] finalProfit = new int[ENROLL_PERSON];
+        int[] parent = new int[ENROLL_PERSON];
         Map<String, Integer> indexMap = new HashMap<>();
 
         // 1. 이름 - 인덱스 매핑
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < ENROLL_PERSON; i++) {
             indexMap.put(enroll[i], i);
         }
 
         // 2. 부모 정보 저장
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < ENROLL_PERSON; i++) {
             if (referral[i].equals("-")) {
                 parent[i] = -1;
             } else {
