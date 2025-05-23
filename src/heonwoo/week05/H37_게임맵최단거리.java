@@ -3,9 +3,7 @@ package heonwoo.week05;
 import java.util.ArrayDeque;
 
 public class H37_게임맵최단거리 {
-    class Solution {
         private static final int[] rx = {0, 0, 1, -1};
-        private static final int[] ry = {1, -1, 0, 0};
 
         private static class Node{
             int r, c;
@@ -43,7 +41,6 @@ public class H37_게임맵최단거리 {
                     if (nr < 0 || nc < 0 || nr >= N || nc >= M) continue;
 
                     // 벽으로 가는 경우 예외 처리
-                    if (maps[nr][nc] == 0) continue;
 
                     // 이동한 위치가 처음 방문하는 경우, queue에 추가하고 거리 갱신
                     if (dist[nr][nc] == 0) {
@@ -55,4 +52,3 @@ public class H37_게임맵최단거리 {
             return dist[N - 1][M - 1] == 0 ? -1 : dist[N - 1][M - 1];
         }
     }
-}
