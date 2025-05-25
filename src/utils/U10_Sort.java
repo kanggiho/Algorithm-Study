@@ -35,7 +35,5 @@ public class U10_Sort {
         // 리스트 -> 배열 변환
         List<Integer> list3 = Arrays.asList(1, 2, 3);
         int[] arr3 = list3.stream().mapToInt(i -> i).toArray();
-
-
     }
 }
