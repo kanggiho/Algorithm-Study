@@ -3,7 +3,7 @@ package jino.week08;
 import java.util.Arrays;
 
 public class J_양궁대회 {
-    
+
     class Solution {
         public int[] solution(int n, int[] info) {
             int[] answer = new int[11];
