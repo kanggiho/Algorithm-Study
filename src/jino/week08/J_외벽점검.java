@@ -3,7 +3,7 @@ package jino.week08;
 import java.util.Arrays;
 
 public class J_외벽점검 {
-    
+
 
     class Solution {
         private static int N;
