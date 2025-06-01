@@ -1,7 +1,7 @@
 package jino.week08;
 
 public class J_사라지는발판 {
-    
+
 
     class Solution {
         private static int[][] D = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
