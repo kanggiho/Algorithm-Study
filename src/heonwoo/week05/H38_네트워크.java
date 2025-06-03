@@ -1,13 +1,16 @@
 package heonwoo.week05;
 
 public class H38_네트워크 {
+    static int[][] computer;
+    static boolean[] visited;
     public int solution(int n, int[][] computers) {
         int answer = 0;
-        boolean[] visited = new boolean[n];
+        computer = computers;
+        visited = new boolean[n];
 
         for (int i = 0; i < n; i++){
             if (!visited[i]){
-                dfs(i, computers, visited);
+                dfs(i);
                 answer++;
             }
         }
@@ -15,12 +18,12 @@ public class H38_네트워크 {
         return answer;
     }
 
-    private void dfs(int current, int[][] computers, boolean[] visited){
+    private void dfs(int current){
         visited[current] = true;
 
-        for (int i = 0; i < computers.length; i++){
-            if (computers[current][i] == 1 && !visited[i]){
-                dfs(i, computers, visited);
+        for (int i = 0; i < computer.length; i++){
+            if (computer[current][i] == 1 && !visited[i]){
+                dfs(i);
             }
         }
     }
