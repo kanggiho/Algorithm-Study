@@ -3,7 +3,7 @@ package jino.week09;
 import java.util.Arrays;
 
 public class J_52정수내림차순정렬하기 {
-    
+
     class Solution {
         private static long answer = 0;
 
