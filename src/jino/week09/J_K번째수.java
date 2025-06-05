@@ -3,7 +3,7 @@ package jino.week09;
 import java.util.Arrays;
 
 public class J_K번째수 {
-    
+
 
     class Solution {
         private static int[] answer;
