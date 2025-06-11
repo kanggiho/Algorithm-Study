@@ -17,7 +17,8 @@ public class J22_베스트앨범 {
                 int play = plays[i];
 
                 if(!genreMap.containsKey(genre)){
-                    genreMap.put(genre, new ArrayList<>());
+                    genreMap.put(genre, new 
+                            ArrayList<>());
                     playMap.put(genre,0);
 
                 }
