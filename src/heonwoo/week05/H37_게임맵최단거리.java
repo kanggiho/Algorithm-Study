@@ -4,6 +4,7 @@ import java.util.ArrayDeque;
 
 public class H37_게임맵최단거리 {
         private static final int[] rx = {0, 0, 1, -1};
+        private static final int[] ry = {-1, 1, 0, 0};
 
         private static class Node{
             int r, c;
