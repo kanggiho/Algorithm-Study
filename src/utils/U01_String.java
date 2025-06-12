@@ -56,5 +56,8 @@ public class U01_String {
         // 문자열 <-> 숫자 변환
         Integer.parseInt("100");   // 문자열 "100" → 숫자 100
         Integer.toString(100);     // 숫자 100 → 문자열 "100"
+
+        // 숫자 -> 문자열 이진수
+        Integer.toBinaryString(100); // 숫자 100 -> 문자열 "1100100"
     }
 }
