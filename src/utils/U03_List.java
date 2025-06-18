@@ -27,7 +27,7 @@ public class U03_List {
         list.remove(0);
 
         // 첫번째 인덱스 제거
-        list.removeFirst();
+        // list.removeFirst();
 
         // 첫번째 값 삭제
         list.remove("one");
