@@ -4,6 +4,7 @@ import java.util.*;
 
 public class G57_지형이동 {
 
+    // 노드 현재 좌표 , 현재까지의 금액
     public static class Node {
         int x, y, cost;
 
@@ -25,6 +26,7 @@ public class G57_지형이동 {
 
         boolean[][] visited = new boolean[n][n];
 
+        // 프림 알고리즘
         PriorityQueue<Node> pq = new PriorityQueue<>((o1, o2) -> o1.cost - o2.cost);
         pq.add(new Node(0, 0, 0));
 
