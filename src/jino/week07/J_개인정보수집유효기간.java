@@ -1,57 +1,58 @@
-//package jino.week07;
-//
-//import java.util.ArrayList;
-//import java.util.HashMap;
-//import java.util.List;
-//import java.util.Map;
-//
-//public class J_개인정보수집유효기간 {
-//
-//    class Solution {
-//        private Map<String , Integer> myHash;
-//        private int[] answer;
-//        private List<Integer> answerList;
-//        private String[] todayArr;
-//        public int[] solution(String today, String[] terms, String[] privacies) {
-//            //초기화
-//            myHash = new HashMap<>();
-//            answerList = new ArrayList<>();
-//            todayArr = today.split("\\.");
-//            for(int i = 0 ; i < terms.length ; i++){
-//                String a = terms[i].charAt(0)+"";
-//                int b = (int)(terms[i].charAt(1));
-//                myHash.put(a, b);
-//            }
-//            for(int i = 0 ; i < privacies.length ; i++){
-//                String[] privaciesArr = privacies[i].split("\\.");
-//                String[] temp = privaciesArr[2].split(" ");
-//                privaciesArr[2] = temp[0];
-//                String B = temp[1];
-//                // System.out.println(B);
-//
-//                addDay(i+1, privacies[i], B);
-//            }
-//
-//
-//            return answer;
-//        }
-//        private static void addDay(int index , String[] privaciesArr, String A){//날짜 변환기
-//            int plusMounth =  myHash.get(A);
-//            String mounth = privaciesArr[1];
-//            int mounth = Integer.parseInt(mounth);
-//            int now = plusMounth + mounth -1;
-//            if(now > 12){
-//                now = now % 12;
-//                privaciesArr[0] = Integer.parseInt(privaciesArr[0] + 1)+"";
-//            }
-//            privaciesArr[1] = now+"";
-//            privaciesArr[0] = (Integer.parseInt(privaciesArr[0]) - 1) +"";
-//            if(privaciesArr[2].equals("0")){
-//                privaciesArr[2] = "28";
-//            }
-//
-//
-//
-//        }
-//    }
-//}
+package jino.week07;
+
+import java.util.*;
+public class J_개인정보수집유효기간 {
+
+    class Solution {
+        private static int[] Pprivacies;
+        private static List<Integer> answerList;
+        private static int[] answer;
+        private static Map<String, Integer> deadMap;
+
+        public int[] solution(String today, String[] terms, String[] privacies) {
+            //초기화
+            Pprivacies = new int[privacies.length];
+            answerList = new ArrayList<>();
+            deadMap = new HashMap<>();
+
+            int Today = changeDay(today);
+
+            for(String term : terms){
+                String[] termParts = term.split(" ");
+                String termType = termParts[0];
+                int validMonths = Integer.parseInt(termParts[1]);
+                deadMap.put(termType, validMonths * 28);
+            }
+            for(int i = 0 ; i < Pprivacies.length ; i++){
+                String date = privacies[i].substring(0,10);
+                int day = changeDay(date);
+
+                String[] privacyParts = privacies[i].split(" ");
+                String termType = privacyParts[1];
+                int plusDay = deadMap.get(termType);
+
+                day += plusDay;
+                if(Today >= day ){
+                    answerList.add(i+1);
+                }
+
+
+            }
+            answer = answerList.stream()
+                    .mapToInt(x -> x)
+                    .toArray();
+            return answer;
+        }
+
+        private static int changeDay(String date){
+            String[] parts = date.split("\\.");
+            int year = Integer.parseInt(parts[0]);
+            int month = Integer.parseInt(parts[1]);
+            int day = Integer.parseInt(parts[2]);
+
+            return (year * 12 * 28) + (month * 28) + day;
+
+        }
+
+    }
+}
