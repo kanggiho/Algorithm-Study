@@ -2,8 +2,8 @@ package jino.week12;
 
 import java.util.Arrays;
 
-public class J_귤고르기 {
-    
+public class J81_귤고르기 {
+
     class Solution {
         public int solution(int k, int[] tangerine) {
             int answer = 0;
