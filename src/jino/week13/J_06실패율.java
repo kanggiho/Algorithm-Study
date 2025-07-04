@@ -3,7 +3,7 @@ package jino.week13;
 import java.util.Arrays;
 
 public class J_06실패율 {
-    
+
     class Solution {
         private static int[] answer;
         private static int[] Stages;
@@ -23,6 +23,7 @@ public class J_06실패율 {
                     failRate[i] = 0;
                 }
                 else{
+                    
                     failRate[i] = (double)Stages[i + 1] / people;
                     people -= Stages[i + 1];
                 }
