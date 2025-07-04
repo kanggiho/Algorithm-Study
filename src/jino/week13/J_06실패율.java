@@ -23,7 +23,6 @@ public class J_06실패율 {
                     failRate[i] = 0;
                 }
                 else{
-                    
                     failRate[i] = (double)Stages[i + 1] / people;
                     people -= Stages[i + 1];
                 }
