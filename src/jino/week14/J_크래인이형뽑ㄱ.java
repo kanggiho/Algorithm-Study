@@ -4,7 +4,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class J_크래인이형뽑ㄱ {
-    
+
 
     class Solution {
         private static int answer = 0;
