@@ -3,7 +3,7 @@ package jino.week14;
 import java.util.*;
 
 public class J_24메뉴리뉴얼 {
-  
+
     class Solution {
         private static String[]Orders;
         private static int[] Course;
