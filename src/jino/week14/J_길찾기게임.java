@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class J_길찾기게임 {
-    
+
     class Solution {
         private static int[][] answer;
         private static List<Node> node;
