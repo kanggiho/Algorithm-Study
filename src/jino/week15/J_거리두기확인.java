@@ -5,7 +5,6 @@ import java.util.Arrays;
 import java.util.Deque;
 
 public class J_거리두기확인 {
-    
     class Solution {
         private static String[][] room;
         private static int[] answer;
@@ -46,12 +45,12 @@ public class J_거리두기확인 {
             visited[nowX][nowY] = true;
 
 
-            if(dept == 1 && room[nowX][nowY].equals("P")){
+            if(isVal(nowX, nowY)&& dept == 1 && room[nowX][nowY].equals("P")){
                 answer[index] = 0;
                 return;
             }
 
-            if(dept == 2 && !lastState.equals("X") && room[nowX][nowY].equals("P")){
+            if(isVal(nowX, nowY) && dept == 2 && !lastState.equals("X") && room[nowX][nowY].equals("P")){
                 answer[index] = 0;
                 return;
             }
@@ -65,6 +64,14 @@ public class J_거리두기확인 {
                 if(nextX >=0 && nextY >= 0 && nextX < 5 && nextY < 5 && !visited[nextX][nextY]){
                     bfs(nextX, nextY, dept + 1, flag, index,room[nowX][nowY]);
                 }
+            }
+        }
+        private static boolean  isVal(int nowX, int nowY){
+            if(nowX >= 0 && nowX < 5 && nowY >=0 && nowY <5 && !visited[nowX][nowY]){
+                return true;
+            }
+            else{
+                return false;
             }
         }
     }
