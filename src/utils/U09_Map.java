@@ -1,6 +1,7 @@
 package utils;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Map.Entry;
 
 public class U09_Map {
@@ -35,7 +36,7 @@ public class U09_Map {
         }
 
         // key-value 출력 (entrySet 활용)
-        for (Entry<Integer, String> temp : hashMap.entrySet()) {
+        for (Map.Entry<Integer, String> temp : hashMap.entrySet()) {
             System.out.println(temp.getKey() + " " + temp.getValue());
         }
     }
